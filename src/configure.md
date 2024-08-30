@@ -20,7 +20,7 @@ log in with a password (enter `p` to select), or SSO (enter `s` to select). If
 you choose SSO, then a page will open in your browser to go through the SSO
 authentication flow.
 
-### Multiple Profiles 
+### Multiple Profiles
 
 You can create multiple profiles for different accounts or settings by adding
 additional subsections to the `profiles` section:
@@ -147,7 +147,7 @@ protocol.font_size = [ 11, 26 ]
 The `"type"` field is one of the three methods from above, and `"font_size"`
 can be used to specify the width and height of each character cell in pixels.
 (Like specifying the `"type"`, this is only necessary if the size in pixels
-can't be detected normally using the standard terminal `ioctl` calls.)  
+can't be detected normally using the standard terminal `ioctl` calls.)
 
 You can control the maximum amount of columns/rows that the images take up in
 the scrollback using the `"size"` field:
@@ -177,7 +177,7 @@ notification level.
 | -------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `enabled`      | `false`                                         | Whether to send notifications                                                                      |
 | `show_message` | `true`                                          | Whether to include the message body when showing the notification                                  |
-| `via`          | `"desktop"`                                     | How to deliver the notification: `"desktop"` for desktop mechanism, or `"bell"` for terminal bell. |
+| `via`          | `"desktop"`                                     | How to deliver the notification: `"desktop"` for desktop mechanism, `"bell"` for terminal bell, or `["desktop", "bell"]` for both. |
 
 
 ### Sorting Lists
@@ -217,7 +217,7 @@ members = ["server", "~localpart"]
 | `"alias"`       | Sort rooms alphabetically by their canonical alias (e.g., `#iamb-users:0x.badd.cafe`)                              |
 | `"id"`          | Sort rooms alphabetically by their unique room identifier (e.g., `!nQTgloqKBScxNjsQzR:0x.badd.cafe`).             |
 
-#### User Fields 
+#### User Fields
 
 | Name            | Description                                                                                                       |
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -307,7 +307,7 @@ Use `|` to specify that something should be mapped in several modes.
 > If you are unsure how to represent a key, you can you record a macro that use
 > it and then look at its representation in the register. For example, you could
 > do the following to find the value of the left arrow key:
-> 
+>
 > - Type `qa` to start recording to the `a` register
 > - Press the left arrow key
 > - Press `q` to stop recording
